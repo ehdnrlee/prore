@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+<configuration>
+	<typeAliases>
+		<!-- 사용자 -->
+		<typeAlias alias="userinfo" type="com.re.mind.vo.userInfo" />
+		<!-- 지점  -->
+		<typeAlias alias="dotinfo" type="com.re.mind.vo.dotInfo" />
+		<typeAlias alias="wainfo" type="com.re.mind.vo.wayInfo" />
+		<typeAlias alias="waypoint" type="com.re.mind.vo.wayPoint" />
+		<!-- 시설 -->
+		<typeAlias alias="fclinfo_rest" type="com.re.mind.vo.fclinfo_restaurant" />
+		<typeAlias alias="fclinfo_degree" type="com.re.mind.vo.fclinfo_degree" />
+		<typeAlias alias="fclinfo_main" type="com.re.mind.vo.fclinfo_main" />
+		<typeAlias alias="fclinfo_time" type="com.re.mind.vo.fclinfo_timelimit" />
+		<typeAlias alias="fclinfo_age" type="com.re.mind.vo.fclinfo_agelimit" />
+		<typeAlias alias="fcl_kind" type="com.re.mind.vo.fcl_kind" />
+	</typeAliases>
+</configuration>

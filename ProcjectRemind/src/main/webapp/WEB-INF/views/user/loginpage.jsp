@@ -15,9 +15,10 @@
 </script>
 <body>
 <form action="login" method="post" id="loginform">
-<input type='hidden' name='${_csrf.parameterName }' value="${_csrf.token }">
-아이디:<input type="text" name="loginid" >
-비밀번호:<input type="password" name="loginpwd" >
+
+아이디:<input type="text" name="id" >
+비밀번호:<input type="password" name="pwd" >
+
 <input type="submit" value="로그인">
 
 </form>

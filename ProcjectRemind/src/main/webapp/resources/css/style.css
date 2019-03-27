@@ -1,0 +1,13 @@
+.AddfclMenu{
+	text-align: center;
+	background-color: coral;
+	display:block;
+	float:left;
+	width:160px;
+	height:100%;
+}
+.AddJob{
+	float:right;
+	width:90%;
+	height:100%;
+}

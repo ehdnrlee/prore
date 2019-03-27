@@ -44,16 +44,14 @@ public class userController {
 	public String userhome(Principal principal, Model model){
 		model.addAttribute("id", principal.getName());
 		System.out.println("로그인후로 이동");
-		return "user/userhome";
-	
-		
+		return "user/userhome";	
 	}
 	
 	
 	@GetMapping("/loginhome")
 	public String loginhome() {
 		System.out.println("로그인 페이지 이동 ");
-		return "user/login";	
+		return "user/loginpage";	
 	}
 	@GetMapping("/joinhome")
 	public String joinhome() {
@@ -75,11 +73,14 @@ public class userController {
 		System.out.println(user.getPwd());
 		return userSer.join(user);
 	}
+	
 	@PostMapping("/login")
 	public ModelAndView login(@ModelAttribute userInfo user,ModelAndView model) {
 		model=userSer.login(user);
 		return model;
 	}
+	
+
 	
 	
 	

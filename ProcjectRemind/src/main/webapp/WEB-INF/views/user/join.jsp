@@ -27,20 +27,13 @@
 	function idcheck(){
 		
 		var id=$("input[name='id']").val();
-		var token=$("input[name='${_csrf.parameterName }']").val();
+		
 		$.ajax({
 			type:"post",
 			url:"idcheck",
 			dataType:"text",
 			data: id,
 			contentType: "application/json; charset=UTF-8",
-			 beforeSend : function(xhr)
-             {   /*데이터를 전송하기 전에 헤더에 csrf값을 설정한다*/
-                 xhr.setRequestHeader("${_csrf.headerName}", "${_csrf.token}");
-             },
-		        error: function(xhr, status, error){
-		            alert(error);
-		        },
 			success:function(data){
 				if(data=="0"){
 					alert("사용가능한 아이디입니다.");
@@ -65,7 +58,7 @@
 <button type="button" onclick="idcheck()" >중복확인</button>
 비밀번호:<input type="password" name="pwd" >
 이름:<input type="text" name="name">
-<input type='hidden' name='${_csrf.parameterName }' value="${_csrf.token }">
+
 <button type="button" onclick="formsubmit()" >입력</button>
 </form>
 

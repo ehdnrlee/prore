@@ -10,7 +10,7 @@
 		<sec:form-login username-parameter="loginid"
 			password-parameter="loginpwd" 
 			login-page="/login"
-			default-target-url="/userHome"
+			default-target-url="/userhome"
 			login-processing-url="/login"
 			authentication-failure-url="/login?job=false"
 			always-use-default-target='true' 
@@ -21,8 +21,8 @@
 		<sec:authentication-provider>
 			<sec:jdbc-user-service
 				data-source-ref="dataSource"
-				users-by-username-query="select id, pwd, enabled from users where id=? and enabled=1"
-				authorities-by-username-query="select id, authority from authorities where id=?" />
+				users-by-username-query="select id, pwd, enabled from user where id=? and enabled=1"
+				authorities-by-username-query="select id, authority from authority where id=?" />
 			<sec:password-encoder ref="pwdEncoder" />
 		</sec:authentication-provider>
 	</sec:authentication-manager>

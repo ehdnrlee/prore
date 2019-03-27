@@ -7,6 +7,7 @@
 <title>로그인페이지</title>
 </head>
 <body>
-	${name}
+<input type="button" value="로그인" id="login" onclick="location.href = '/mind/loginhome'">
+ <input type="button" value="회원가입" id="join" onclick="location.href = '/mind/joinhome'">
 </body>
 </html>
